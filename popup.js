@@ -8,8 +8,10 @@ $(function() {
       var drivelink = match[1];
       var exportlink = "https://drive.google.com/uc?export=view&id=" + drivelink;
       $("#text").text(exportlink);
+      $("#text").select();
       $("#link").attr("href", exportlink);
       $("#link").text(exportlink);
+      document.execCommand('copy')
     } else {
       $("#text").text("not drive link");
     }
