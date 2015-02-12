@@ -6,7 +6,7 @@ $(function() {
 
     if (match && match.length > 1) {
       var drivelink = match[1];
-      var exportlink = "https://drive.google.com/uc?export=view&id=" + drivelink;
+      var exportlink = "https://drive.google.com/uc?id=" + drivelink + "&ext=.png";
       $("#text").text(exportlink);
       $("#text").select();
       $("#link").attr("href", exportlink);
