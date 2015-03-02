@@ -7,13 +7,17 @@ $(function() {
     if (match && match.length > 1) {
       var drivelink = match[1];
       var exportlink = "https://drive.google.com/uc?id=" + drivelink + "&ext=.png";
-      $("#text").text(exportlink);
-      $("#text").select();
+      $("#text_original").text(exportlink);
+
+      $("#text_hatena").text("[" + exportlink + ":image:w600]");
+      $("#text_hatena").select();
+
       $("#link").attr("href", exportlink);
       $("#link").text(exportlink);
       document.execCommand('copy')
     } else {
-      $("#text").text("not drive link");
+      $("#text_original").text("not drive link");
+      $("#text_hatena").text("not drive link");
     }
   });
 });
