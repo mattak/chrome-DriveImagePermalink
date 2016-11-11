@@ -9,6 +9,9 @@ $(function() {
       var exportlink = "https://drive.google.com/uc?id=" + drivelink + "&authuser=0&ext=.png";
       $("#text_original").text(exportlink);
 
+      $("#text_markdown").text("![" + exportlink + "]" + "(" + exportlink + ")");
+      $("#text_markdown").select();
+
       $("#text_hatena").text("[" + exportlink + ":image:w600]");
       $("#text_hatena").select();
 
@@ -20,7 +23,9 @@ $(function() {
       document.execCommand('copy')
     } else {
       $("#text_original").text("not drive link");
+      $("#text_markdown").text("not drive link");
       $("#text_hatena").text("not drive link");
+      $("#text_jira").text("not drive link");
     }
   });
 });
