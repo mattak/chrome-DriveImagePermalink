@@ -37,3 +37,9 @@ check developer mode & install by specify the unzipped folder
 ![UsagePopup](./art/usage_popup.png)
 
 
+## Special thanks
+
+I'd appreciate contributors.
+
+- @jjpixel (#1 markdown support)
+
